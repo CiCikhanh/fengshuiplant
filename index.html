@@ -1,144 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tree Store Art — Handcrafted Tree Art & Prints</title>
-  <meta name="description" content="Tree Store Art — original tree-themed artwork, prints, and home decor. Handcrafted, limited editions, worldwide shipping." />
+  <meta name="description" content="Tree themed artwork, prints, and home decor. Handcrafted, limited editions." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tree Store Art — Handcrafted Tree Art & Prints">
-  <meta property="og:description" content="Original tree-themed artwork, prints, and home decor. Handcrafted, limited editions.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/og-image.jpg">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Store",
-    "name":"Tree Store Art",
-    "url":"https://YOUR-SITE.example",
-    "description":"Handmade tree themed art and prints"
-  }
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="/">Tree Store Art</a>
-      <nav class="nav">
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <a class="btn plants-btn" href="/plants-library">Plants Library</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Tree art that brings nature into your space</h1>
-          <p class="lead">Limited-edition prints and original pieces inspired by forest forms, textures and seasons.</p>
-          <p class="hero-ctas">
-            <a class="btn primary" href="#gallery">View Gallery</a>
-            <a class="btn" href="#contact">Commission a piece</a>
-          </p>
-        </div>
-        <div class="hero-image" aria-hidden="true">
-          <!-- Replace with your illustrated SVG or hero photo -->
-          <img src="images/hero-tree.jpg" alt="Stylized tree art on a wall" width="560">
+    <section class="hero" role="banner" aria-label="Hero with background and quote">
+      <div class="hero-inner container">
+        <div class="quote-wrap" aria-hidden="false">
+          <blockquote class="quote">"Năng lượng của cây xanh - cân bằng phong thuỷ"</blockquote>
         </div>
       </div>
-    </section>
-
-    <!-- Highlights -->
-    <section class="highlights container">
-      <ul class="grid-3">
-        <li>
-          <h3>Handmade originals</h3>
-          <p>Each piece created by the artist in small batches.</p>
-        </li>
-        <li>
-          <h3>Global shipping</h3>
-          <p>Carefully packaged prints delivered worldwide.</p>
-        </li>
-        <li>
-          <h3>Sustainable materials</h3>
-          <p>Acid-free paper, eco inks, and recycled packaging.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="container gallery">
-      <h2>Gallery</h2>
-      <p class="muted">Click to view larger.</p>
-      <div class="grid-gallery">
-        <!-- Replace src and alt with your images -->
-        <figure>
-          <img data-src="images/art1.jpg" alt="Autumn grove print" loading="lazy" class="lazy">
-        </figure>
-        <figure>
-          <img data-src="images/art2.jpg" alt="Minimalist tree silhouette" loading="lazy" class="lazy">
-        </figure>
-        <figure>
-          <img data-src="images/art3.jpg" alt="Abstract root forms" loading="lazy" class="lazy">
-        </figure>
-        <figure>
-          <img data-src="images/art4.jpg" alt="Winter branch study" loading="lazy" class="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="container about">
-      <h2>About the artist</h2>
-      <div class="about-grid">
-        <div>
-          <p>I'm [Artist Name], a nature-inspired artist working with mixed media and printmaking. My work explores the patterns and rhythms of trees.</p>
-          <ul>
-            <li>Originals & limited prints</li>
-            <li>Commissions accepted</li>
-            <li>Workshops and prints</li>
-          </ul>
-        </div>
-        <div><img src="images/artist.jpg" alt="Artist portrait"></div>
-      </div>
-    </section>
-
-    <!-- Contact / Subscribe -->
-    <section id="contact" class="container contact">
-      <h2>Get in touch / Subscribe</h2>
-      <p class="muted">Questions about a piece or want a custom commission? Send a message or join the mailing list.</p>
-      <form id="contactForm" class="form">
-        <label>
-          <span>Your name</span>
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button class="btn primary" type="submit">Send message</button>
-        <div id="formMsg" role="status" aria-live="polite"></div>
-      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Tree Store Art — handcrafted tree art. <a href="/privacy">Privacy</a></p>
+      <p>© <span id="year"></span> Tree Store Art</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // simple year injection
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
